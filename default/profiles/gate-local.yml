@@ -1,0 +1,8 @@
+server:
+  tomcat:
+    internalProxies: .*
+    protocolHeader: X-Forwarded-Proto
+    remoteIpHeader: X-Forwarded-For
+redis:
+  configuration:
+    secure: true

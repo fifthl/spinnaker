@@ -1,0 +1,5 @@
+fiat:
+  executeFallback: 'READ'
+  admin:
+    roles:
+    - admin

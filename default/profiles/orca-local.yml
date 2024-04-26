@@ -1,0 +1,12 @@
+services.redis.baseUrl: redis://10.33.13.113:6379
+tasks:
+  useManagedServiceAccounts: true
+pollers:
+  oldPipelineCleanup:
+    enabled: true 
+    intervalMs: 3600000  
+    thresholdDays: 30
+    minimumPipelineExecutions: 5 
+spinnaker:
+  baseUrl:
+    www: https://spin.sczsdc.com

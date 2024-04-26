@@ -1,0 +1,383 @@
+igor:
+  spinnaker-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker-local.yml
+    version: local:4.7.2
+    outputFile: /opt/spinnaker/config/spinnaker-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  igor.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: igor.yml
+    version: local:4.7.2
+    outputFile: /opt/spinnaker/config/igor.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+echo:
+  spinnaker-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker-local.yml
+    version: local:2.34.2
+    outputFile: /opt/spinnaker/config/spinnaker-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  echo.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: echo.yml
+    version: local:2.34.2
+    outputFile: /opt/spinnaker/config/echo.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  echo-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: echo-local.yml
+    version: local:2.34.2
+    outputFile: /opt/spinnaker/config/echo-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+gate:
+  spinnaker-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker-local.yml
+    version: local:6.55.2
+    outputFile: /opt/spinnaker/config/spinnaker-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  gate.yml:
+    requiredFiles:
+    - /home/spinnaker/.hal/default/staging/dependencies/193601681-auth-roles.yml
+    decryptedFiles: {}
+    env: {}
+    name: gate.yml
+    version: local:6.55.2
+    outputFile: /opt/spinnaker/config/gate.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  gate-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: gate-local.yml
+    version: local:6.55.2
+    outputFile: /opt/spinnaker/config/gate-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+clouddriver:
+  spinnaker-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker-local.yml
+    version: local:5.76.2
+    outputFile: /opt/spinnaker/config/spinnaker-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  clouddriver-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: clouddriver-local.yml
+    version: local:5.76.2
+    outputFile: /opt/spinnaker/config/clouddriver-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  clouddriver.yml:
+    requiredFiles:
+    - /home/spinnaker/.hal/default/staging/dependencies/2054179555-config
+    decryptedFiles: {}
+    env: {}
+    name: clouddriver.yml
+    version: local:5.76.2
+    outputFile: /opt/spinnaker/config/clouddriver.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+orca:
+  spinnaker-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker-local.yml
+    version: local:8.24.2
+    outputFile: /opt/spinnaker/config/spinnaker-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  orca-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: orca-local.yml
+    version: local:8.24.2
+    outputFile: /opt/spinnaker/config/orca-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  orca/shutdown.sh:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: orca/shutdown.sh
+    version: local:8.24.2
+    outputFile: /opt/spinnaker/scripts/shutdown.sh
+    executable: true
+    user: spinnaker
+    group: spinnaker
+  orca.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: orca.yml
+    version: local:8.24.2
+    outputFile: /opt/spinnaker/config/orca.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+deck:
+  settings.js:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: settings.js
+    version: local:3.9.1
+    outputFile: /opt/spinnaker/config/settings.js
+    executable: false
+    user: www-data
+    group: spinnaker
+  settings-local.js:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: settings-local.js
+    version: local:3.9.1
+    outputFile: /opt/spinnaker/config/settings-local.js
+    executable: false
+    user: spinnaker
+    group: spinnaker
+fiat:
+  fiat-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: fiat-local.yml
+    version: local:1.31.2
+    outputFile: /opt/spinnaker/config/fiat-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker-local.yml
+    version: local:1.31.2
+    outputFile: /opt/spinnaker/config/spinnaker-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  fiat.yml:
+    requiredFiles:
+    - /home/spinnaker/.hal/default/staging/dependencies/193601681-auth-roles.yml
+    decryptedFiles: {}
+    env: {}
+    name: fiat.yml
+    version: local:1.31.2
+    outputFile: /opt/spinnaker/config/fiat.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+front50:
+  aws/front50-credentials_home_spinnaker:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: aws/front50-credentials_home_spinnaker
+    version: local:2.25.2
+    outputFile: /home/spinnaker/.aws/credentials
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  front50-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: front50-local.yml
+    version: local:2.25.2
+    outputFile: /opt/spinnaker/config/front50-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  front50.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: front50.yml
+    version: local:2.25.2
+    outputFile: /opt/spinnaker/config/front50.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker-local.yml
+    version: local:2.25.2
+    outputFile: /opt/spinnaker/config/spinnaker-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  aws/front50-credentials_root:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: aws/front50-credentials_root
+    version: local:2.25.2
+    outputFile: /root/.aws/credentials
+    executable: false
+    user: spinnaker
+    group: spinnaker
+redis: {}
+rosco:
+  spinnaker-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker-local.yml
+    version: local:1.8.3
+    outputFile: /opt/spinnaker/config/spinnaker-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco-local.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco-local.yml
+    version: local:1.8.3
+    outputFile: /opt/spinnaker/config/rosco-local.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco.yml
+    version: local:1.8.3
+    outputFile: /opt/spinnaker/config/rosco.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/
+    version: local:1.8.3
+    outputFile: /opt/rosco/config/packer
+    executable: false
+    user: spinnaker
+    group: spinnaker

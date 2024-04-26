@@ -1,0 +1,5 @@
+services.redis.baseUrl: redis://10.33.13.113:6379
+redis:
+  poll:
+    timeoutSeconds: 10
+    intervalSeconds: 10

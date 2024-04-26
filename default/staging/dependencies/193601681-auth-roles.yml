@@ -1,0 +1,11 @@
+users:
+ - username: read
+   roles:
+   - read-roles
+ - username: write
+   roles:
+   - write-roles
+   - read-roles
+ - username: admin
+   roles:
+   - admin

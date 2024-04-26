@@ -1,0 +1,322 @@
+currentDeployment: default
+deploymentConfigurations:
+- name: default
+  version: local:1.28.1
+  providers:
+    appengine:
+      enabled: false
+      accounts: []
+    aws:
+      enabled: false
+      accounts: []
+      bakeryDefaults:
+        baseImages: []
+      defaultKeyPairTemplate: '{{name}}-keypair'
+      defaultRegions:
+      - name: us-west-2
+      defaults:
+        iamRole: BaseIAMRole
+    ecs:
+      enabled: false
+      accounts: []
+    azure:
+      enabled: false
+      accounts: []
+      bakeryDefaults:
+        templateFile: azure-linux.json
+        baseImages: []
+    dcos:
+      enabled: false
+      accounts: []
+      clusters: []
+    dockerRegistry:
+      enabled: false
+      accounts: []
+    google:
+      enabled: false
+      accounts: []
+      bakeryDefaults:
+        templateFile: gce.json
+        baseImages: []
+        zone: us-central1-f
+        network: default
+        useInternalIp: false
+    huaweicloud:
+      enabled: false
+      accounts: []
+      bakeryDefaults:
+        baseImages: []
+    kubernetes:
+      enabled: true
+      accounts:
+      - name: spin-k8s
+        requiredGroupMembership: []
+        permissions:
+          READ:
+          - read-roles
+          WRITE:
+          - write-roles
+        dockerRegistries: []
+        providerVersion: V2
+        context: microk8s
+        configureImagePullSecrets: true
+        cacheThreads: 1
+        namespaces: []
+        omitNamespaces:
+        - ingress
+        - kube-public
+        - kube-system
+        kinds: []
+        omitKinds: []
+        customResources: []
+        cachingPolicies: []
+        kubeconfigFile: /home/spinnaker/.kube/config
+        rawResourcesEndpointConfig:
+          kindExpressions: []
+          omitKindExpressions: []
+        oAuthScopes: []
+        onlySpinnakerManaged: false
+      primaryAccount: spin-k8s
+    tencentcloud:
+      enabled: false
+      accounts: []
+      bakeryDefaults:
+        baseImages: []
+    oracle:
+      enabled: false
+      accounts: []
+      bakeryDefaults:
+        templateFile: oci.json
+        baseImages: []
+    cloudfoundry:
+      enabled: false
+      accounts: []
+  deploymentEnvironment:
+    size: SMALL
+    type: Distributed
+    accountName: spin-k8s
+    imageVariant: SLIM
+    updateVersions: true
+    consul:
+      enabled: false
+    vault:
+      enabled: false
+    location: spin
+    customSizing: {}
+    sidecars: {}
+    initContainers: {}
+    hostAliases: {}
+    affinity: {}
+    tolerations: {}
+    nodeSelectors: {}
+    gitConfig:
+      upstreamUser: spinnaker
+    livenessProbeConfig:
+      enabled: false
+    haServices:
+      clouddriver:
+        enabled: false
+        disableClouddriverRoDeck: false
+      echo:
+        enabled: false
+  persistentStorage:
+    persistentStoreType: s3
+    azs: {}
+    gcs:
+      rootFolder: front50
+      bucketLocation: ''
+    redis: {}
+    s3:
+      bucket: spinnaker
+      rootFolder: front50
+      pathStyleAccess: true
+      endpoint: http://10.33.13.113:9199
+      accessKeyId: H88kexI48k5CYk9N
+      secretAccessKey: oqZQ55ufHulyxuS151faNWNhaQcFTntN
+    oracle: {}
+  features:
+    chaos: false
+    pipelineTemplates: true
+    managedPipelineTemplatesV2UI: true
+  metricStores:
+    datadog:
+      enabled: false
+      tags: []
+    prometheus:
+      enabled: false
+      add_source_metalabels: true
+    stackdriver:
+      enabled: false
+    newrelic:
+      enabled: false
+      tags: []
+    period: 30
+    enabled: false
+  notifications:
+    slack:
+      enabled: false
+    twilio:
+      enabled: false
+      baseUrl: https://api.twilio.com/
+    github-status:
+      enabled: false
+  timezone: Asia/Shanghai
+  ci:
+    jenkins:
+      enabled: true
+      masters:
+      - name: test-ci
+        permissions: {}
+        address: https://admin:116fd5cb721b8c8edeeb469be7a128088b@jenkins.sczsdc.com
+    travis:
+      enabled: false
+      masters: []
+    wercker:
+      enabled: false
+      masters: []
+    concourse:
+      enabled: false
+      masters: []
+    gcb:
+      enabled: false
+      accounts: []
+    codebuild:
+      enabled: false
+      accounts: []
+  repository:
+    artifactory:
+      enabled: false
+      searches: []
+    nexus:
+      enabled: false
+      searches: []
+  security:
+    apiSecurity:
+      ssl:
+        enabled: false
+      overrideBaseUrl: https://gate.sczsdc.com
+    uiSecurity:
+      ssl:
+        enabled: false
+      overrideBaseUrl: https://spin.sczsdc.com
+    authn:
+      oauth2:
+        enabled: true
+        client:
+          clientId: spinnaker
+          clientSecret: 0kzImiUKUeek2OR46IqvEQFWV05ESfrX
+          accessTokenUri: https://sso.sczsdc.com:8443/realms/devops/protocol/openid-connect/token
+          userAuthorizationUri: https://sso.sczsdc.com:8443/realms/devops/protocol/openid-connect/auth
+          preEstablishedRedirectUri: https://gate.sczsdc.com/login
+        resource:
+          userInfoUri: https://sso.sczsdc.com:8443/realms/devops/protocol/openid-connect/userinfo
+        userInfoMapping:
+          email: email
+          firstName: given_name
+          lastName: family_name
+          username: preferred_username
+      saml:
+        enabled: false
+        userAttributeMapping: {}
+      ldap:
+        enabled: false
+      x509:
+        enabled: false
+      iap:
+        enabled: false
+      enabled: true
+    authz:
+      groupMembership:
+        service: FILE
+        google:
+          roleProviderType: GOOGLE
+        github:
+          roleProviderType: GITHUB
+        file:
+          roleProviderType: FILE
+          path: /home/spinnaker/auth-roles.yml
+        ldap:
+          roleProviderType: LDAP
+      enabled: true
+  artifacts:
+    bitbucket:
+      enabled: false
+      accounts: []
+    gcs:
+      enabled: false
+      accounts: []
+    oracle:
+      enabled: false
+      accounts: []
+    github:
+      enabled: false
+      accounts: []
+    gitlab:
+      enabled: false
+      accounts: []
+    gitrepo:
+      enabled: false
+      accounts: []
+    http:
+      enabled: false
+      accounts: []
+    helm:
+      enabled: false
+      accounts: []
+    s3:
+      enabled: false
+      accounts: []
+    maven:
+      enabled: false
+      accounts: []
+    templates: []
+  pubsub:
+    enabled: false
+    google:
+      enabled: false
+      pubsubType: GOOGLE
+      subscriptions: []
+      publishers: []
+  canary:
+    enabled: false
+    serviceIntegrations:
+    - name: google
+      enabled: false
+      accounts: []
+      gcsEnabled: false
+      stackdriverEnabled: false
+    - name: prometheus
+      enabled: false
+      accounts: []
+    - name: datadog
+      enabled: false
+      accounts: []
+    - name: signalfx
+      enabled: false
+      accounts: []
+    - name: aws
+      enabled: false
+      accounts: []
+      s3Enabled: false
+    - name: newrelic
+      enabled: false
+      accounts: []
+    reduxLoggerEnabled: true
+    defaultJudge: NetflixACAJudge-v1.0
+    stagesEnabled: true
+    templatesEnabled: true
+    showAllConfigsEnabled: true
+  spinnaker:
+    extensibility:
+      plugins: {}
+      repositories: {}
+  webhook:
+    trust:
+      enabled: false
+  stats:
+    enabled: false
+    endpoint: https://stats.spinnaker.io
+    instanceId: 01GDDJ9FM0ZWR14GRTZ8XAVW3E
+    deploymentMethod: {}
+    connectionTimeoutMillis: 3000
+    readTimeoutMillis: 5000

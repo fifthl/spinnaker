@@ -1,0 +1,4 @@
+artifactId: registry.cn-beijing.aliyuncs.com/zhangqinbo/spinnaker:deck-3.9.1
+env:
+  API_HOST: http://spin-gate:8084
+  JAVA_OPTS: -Xms512m -Xmx1024m

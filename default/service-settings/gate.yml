@@ -1,0 +1,3 @@
+artifactId: registry.cn-beijing.aliyuncs.com/zhangqinbo/spinnaker:gate-6.55.2
+env:
+  JAVA_OPTS: -Xms1024m -Xmx1536m
